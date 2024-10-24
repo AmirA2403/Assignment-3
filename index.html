@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health and Fitness Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Authentication Section (Username Input) -->
+    <div class="auth-container" id="authContainer">
+        <h2>Welcome! Please enter your username to start the quiz:</h2>
+        <input type="text" id="usernameInput" placeholder="Enter Username">
+        <button onclick="authenticate()">Start Quiz</button>
+        <p id="authError" style="color:red; display:none;">Please enter a username to proceed.</p>
+    </div>
+
+    <!-- Quiz Section (Initially Hidden) -->
+    <div class="quiz-container" id="quizContainer" style="display: none;">
+        <h1>Health and Fitness Quiz</h1>
+
+        <!-- Result and Progress Area -->
+        <div id="resultContainer">
+            <p id="resultText"></p>
+            <div id="progressBarContainer">
+                <progress id="progressBar" value="0" max="5"></progress>
+                <p id="progressText">0/5 Questions Answered</p>
+            </div>
+        </div>
+
+        <form id="quizForm">
+            <!-- Question 1 -->
+            <div class="question">
+                <p>1. What is the recommended daily water intake for adults?</p>
+                <div class="options">
+                    <input type="radio" id="q1a" name="q1" value="a">
+                    <label for="q1a">1-2 liters</label><br>
+                    <input type="radio" id="q1b" name="q1" value="b">
+                    <label for="q1b">2-3 liters</label><br>
+                    <input type="radio" id="q1c" name="q1" value="c">
+                    <label for="q1c">3-4 liters</label><br>
+                    <input type="radio" id="q1d" name="q1" value="d">
+                    <label for="q1d">4-5 liters</label><br>
+                </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question">
+                <p>2. Strength training is only for building muscle, not for weight loss. </p>
+                <div class="options">
+                    <input type="radio" id="q2a" name="q2" value="true">
+                    <label for="q2a">True</label><br>
+                    <input type="radio" id="q2b" name="q2" value="false">
+                    <label for="q2b">False</label><br>
+                </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question">
+                <p>3. Which of these exercises is best for improving cardiovascular fitness?</p>
+                <div class="options">
+                    <input type="radio" id="q3a" name="q3" value="a">
+                    <label for="q3a">Weightlifting</label><br>
+                    <input type="radio" id="q3b" name="q3" value="b">
+                    <label for="q3b">Running</label><br>
+                    <input type="radio" id="q3c" name="q3" value="c">
+                    <label for="q3c">Yoga</label><br>
+                    <input type="radio" id="q3d" name="q3" value="d">
+                    <label for="q3d">Stretching</label><br>
+                </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question">
+                <p>4. Eating carbohydrates will make you gain weight.</p>
+                <div class="options">
+                    <input type="radio" id="q4a" name="q4" value="true">
+                    <label for="q4a">True</label><br>
+                    <input type="radio" id="q4b" name="q4" value="false">
+                    <label for="q4b">False</label><br>
+                </div>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="question">
+                <p>5. How many minutes of moderate exercise should adults aim for each week?</p>
+                <div class="options">
+                    <input type="radio" id="q5a" name="q5" value="a">
+                    <label for="q5a">75 minutes</label><br>
+                    <input type="radio" id="q5b" name="q5" value="b">
+                    <label for="q5b">150 minutes</label><br>
+                    <input type="radio" id="q5c" name="q5" value="c">
+                    <label for="q5c">200 minutes</label><br>
+                    <input type="radio" id="q5d" name="q5" value="d">
+                    <label for="q5d">250 minutes</label><br>
+                </div>
+            </div>
+
+            <!-- Submit button -->
+            <button type="button" onclick="submitQuiz()">Submit Quiz</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
